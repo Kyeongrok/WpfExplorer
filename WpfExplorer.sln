@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExplorer", "WpfExplorer\WpfExplorer.csproj", "{F7101283-C870-4061-A3AE-3E506997987F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExplorer.Support", "WpfExplorer.Support\WpfExplorer.Support.csproj", "{48B453AD-7196-4CB2-A186-D4FD3EA5588F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7101283-C870-4061-A3AE-3E506997987F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7101283-C870-4061-A3AE-3E506997987F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7101283-C870-4061-A3AE-3E506997987F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7101283-C870-4061-A3AE-3E506997987F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48B453AD-7196-4CB2-A186-D4FD3EA5588F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48B453AD-7196-4CB2-A186-D4FD3EA5588F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48B453AD-7196-4CB2-A186-D4FD3EA5588F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48B453AD-7196-4CB2-A186-D4FD3EA5588F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
