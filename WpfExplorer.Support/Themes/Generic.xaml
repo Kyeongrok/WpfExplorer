@@ -3,6 +3,9 @@
                     xmlns:local="clr-namespace:WpfExplorer.Support.UI.Units">
 
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/CloseButton.xaml"/>
+        <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MaximizeButton.xaml"/>
+        <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MinimizeButton.xaml"/>
         <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/DarkScrollViewer.xaml"/>
         <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/DarkWindow.xaml"/>
     </ResourceDictionary.MergedDictionaries>

@@ -1,3 +1,7 @@
 ﻿/.idea/.idea.WpfExplorer/.idea/.gitignore
 /.idea/*
 */obj/*
+/.vs
+/_vsvimrc
+/WpfExplorer/bin/Debug/net8.0-windows
+/WpfExplorer.Support/bin/Debug/net8.0-windows
