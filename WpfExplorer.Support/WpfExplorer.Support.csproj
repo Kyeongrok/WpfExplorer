@@ -8,10 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="UI\Units\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.113" />
     </ItemGroup>
 
