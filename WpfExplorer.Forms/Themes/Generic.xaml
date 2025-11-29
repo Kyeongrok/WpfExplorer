@@ -4,6 +4,7 @@
     xmlns:local="clr-namespace:WpfExplorer.Forms">
 
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/WpfExplorer.Forms;component/Themes/Units/FolderTreeView.xaml"/>
         <ResourceDictionary Source="/WpfExplorer.Forms;component/Themes/Views/ExplorerWindow.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 

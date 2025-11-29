@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExplorer", "WpfExplorer\WpfExplorer.csproj", "{F7101283-C870-4061-A3AE-3E506997987F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExplorer.Support", "WpfExplorer.Support\WpfExplorer.Support.csproj", "{48B453AD-7196-4CB2-A186-D4FD3EA5588F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExplorer.Forms", "WpfExplorer.Forms\WpfExplorer.Forms.csproj", "{C3ECD2C7-25BB-46B2-8C3F-A9BC6BDFF8D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,15 @@ Global
 		{48B453AD-7196-4CB2-A186-D4FD3EA5588F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48B453AD-7196-4CB2-A186-D4FD3EA5588F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48B453AD-7196-4CB2-A186-D4FD3EA5588F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3ECD2C7-25BB-46B2-8C3F-A9BC6BDFF8D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3ECD2C7-25BB-46B2-8C3F-A9BC6BDFF8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3ECD2C7-25BB-46B2-8C3F-A9BC6BDFF8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3ECD2C7-25BB-46B2-8C3F-A9BC6BDFF8D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81BEC9CB-4A29-467E-A585-6C0023E589AC}
 	EndGlobalSection
 EndGlobal
