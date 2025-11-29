@@ -11,9 +11,9 @@
         <Setter Property="Content">
             <Setter.Value>
                 <units:FolderTreeView>
-                    <TreeViewItem>Lucas</TreeViewItem>
-                    <TreeViewItem>Kevin</TreeViewItem>
-                    <TreeViewItem>Joolo</TreeViewItem>
+                    <units:FolderTreeItem Header="Lucas"/>
+                    <units:FolderTreeItem Header="Kevin"/>
+                    <units:FolderTreeItem Header="Joolo"/>
                 </units:FolderTreeView>
             </Setter.Value>
         </Setter>
