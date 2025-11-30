@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfExplorer.Forms.Local.ViewModels;
 using WpfExplorer.Support.UI.Units;
 
 namespace WpfExplorer.Forms.UI.Views
@@ -51,6 +52,11 @@ namespace WpfExplorer.Forms.UI.Views
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ExplorerWindow), 
                 new FrameworkPropertyMetadata(typeof(ExplorerWindow)));
+        }
+
+        public ExplorerWindow()
+        {
+            DataContext = new ExplorerViewModel();
         }
     }
 }

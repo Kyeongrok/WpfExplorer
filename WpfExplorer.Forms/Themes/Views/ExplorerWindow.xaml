@@ -10,11 +10,14 @@
         BasedOn="{StaticResource {x:Type based:DarkWindow}}">
         <Setter Property="Content">
             <Setter.Value>
-                <units:FolderTreeView>
-                    <units:FolderTreeItem Header="Lucas"/>
-                    <units:FolderTreeItem Header="Kevin"/>
-                    <units:FolderTreeItem Header="Joolo"/>
-                </units:FolderTreeView>
+                <StackPanel>
+                    <TextBlock Text="{Binding .}" Foreground="Azure"></TextBlock>
+                    <units:FolderTreeView>
+                        <units:FolderTreeItem Header="Lucas"/>
+                        <units:FolderTreeItem Header="Kevin"/>
+                        <units:FolderTreeItem Header="Joolo"/>
+                    </units:FolderTreeView>
+                </StackPanel>
             </Setter.Value>
         </Setter>
     </Style>  
