@@ -11,12 +11,4 @@
     <ProjectReference Include="..\WpfExplorer.Support\WpfExplorer.Support.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Page Update="Themes\Units\FolderTreeItem.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <XamlRuntime>Wpf</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-
 </Project>

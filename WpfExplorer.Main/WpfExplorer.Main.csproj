@@ -16,4 +16,13 @@
       <ProjectReference Include="..\WpfExplorer.Support\WpfExplorer.Support.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Page Update="Themes\Units\FolderTreeView.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Themes\Units\FolderTreeItem.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+    </ItemGroup>
+
 </Project>

@@ -3,7 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:based="clr-namespace:WpfExplorer.Support.UI.Units;assembly=WpfExplorer.Support"
     xmlns:views="clr-namespace:WpfExplorer.Forms.UI.Views"
-    xmlns:units="clr-namespace:WpfExplorer.Forms.UI.Units"
     xmlns:james="https://jamesnet.dev/xaml/presentation">
 
     <Style 
