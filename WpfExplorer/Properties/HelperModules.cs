@@ -13,6 +13,6 @@ internal class HelperModules : IModule
     public void RegisterTypes(IContainerRegistry containerRegistry)
     {
         containerRegistry.RegisterSingleton<DirectoryManager>();
+        containerRegistry.RegisterSingleton<FileService>();
     }
-
 }

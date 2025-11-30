@@ -6,9 +6,9 @@
         <Setter Property="Foreground" Value="Azure"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate 
+                <ControlTemplate
                     TargetType="{x:Type units:FolderTreeItem}">
-                    <TextBlock Text="{TemplateBinding Header}"></TextBlock>
+                    <TextBlock Text="{Binding Name}" Foreground="Black"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

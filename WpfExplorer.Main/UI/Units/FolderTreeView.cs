@@ -11,4 +11,8 @@ public class FolderTreeView : TreeView
             new FrameworkPropertyMetadata(typeof(FolderTreeView))
         );
     }
+    protected override DependencyObject GetContainerForItemOverride()
+    {
+        return new FolderTreeItem();
+    }
 }
