@@ -1,11 +1,16 @@
-﻿namespace WpfExplorer;
+﻿using WpfExplorer.Properties;
+
+namespace WpfExplorer;
 
 internal class Starter
 {
     [STAThread]
     private static void Main(string[] args)
     {
-        _ = new App().Run();
+        _ = new App()
+            .AddInversionModule<HelperModules>()
+            .AddWireDataContext<WireDataContext>()
+            .Run();
         
     }
     

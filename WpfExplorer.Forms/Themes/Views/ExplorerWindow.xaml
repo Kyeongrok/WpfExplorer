@@ -11,7 +11,10 @@
         <Setter Property="Content">
             <Setter.Value>
                 <StackPanel>
-                    <TextBlock Text="{Binding .}" Foreground="Azure"></TextBlock>
+                    <TextBlock Text="{Binding .}" Foreground="Azure"/>
+                    <TextBlock Text="{Binding DownloadDirectory}" Foreground="Azure"/>
+                    <TextBlock Text="{Binding DocumentsDirectory}" Foreground="Azure"/>
+                    <TextBlock Text="{Binding PicturesDirectory}" Foreground="Azure"/>
                     <units:FolderTreeView>
                         <units:FolderTreeItem Header="Lucas"/>
                         <units:FolderTreeItem Header="Kevin"/>
