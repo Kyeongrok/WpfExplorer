@@ -3,12 +3,11 @@
                     xmlns:units="clr-namespace:WpfExplorer.Main.UI.Units"
                     >
     <Style TargetType="{x:Type units:FolderTreeItem}">
-        <Setter Property="Foreground" Value="Azure"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate
                     TargetType="{x:Type units:FolderTreeItem}">
-                    <TextBlock Text="{Binding Name}" Foreground="Black"/>
+                    <TextBlock Text="{Binding Name}" Foreground="AliceBlue"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
