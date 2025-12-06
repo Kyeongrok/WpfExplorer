@@ -38,30 +38,10 @@ public partial class MainContentViewModel : ObservableBase
 
     private void _navigatorService_LocationChanged(object? sender, LocationChangedEventArgs e)
     {
-        List<FolderInfo> source = GetDirectoryItems(e.Current.FullPath);
-
-        Files.Clear();
-        Files.AddRange(source);
+        _fileService.TryRefreshFiles(Files, out bool isDenied);
     }
     
     
-    private List<FolderInfo> GetDirectoryItems(string fullPath)
-    {
-        List<FolderInfo> items = new();
-
-        string[] dirs = Directory.GetDirectories(fullPath);
-        foreach (string path in dirs)
-        {
-            items.Add(new FolderInfo { FullPath = path });
-        }
-
-        string[] files = Directory.GetFiles(fullPath);
-        foreach (string path in files)
-        {
-            items.Add(new FolderInfo { FullPath = path });
-        }
-        return items;
-    }
 
     /// <summary>
     /// 폴더 선택 시 호출되는 커맨드
@@ -73,6 +53,24 @@ public partial class MainContentViewModel : ObservableBase
     {
         _fileService.RefreshSubdirectories(folderInfo);
         _navigatorService.ChangeLocation(folderInfo);
+    }
+    
+    [RelayCommand]
+    private void GoBack()
+    {
+        _navigatorService.GoBack();
+    }
+
+    [RelayCommand]
+    private void GoForward()
+    {
+        _navigatorService.GoForward();
+    }
+
+    [RelayCommand]
+    private void GoToParent()
+    {
+        _navigatorService.GoToParent();
     }
 
 }

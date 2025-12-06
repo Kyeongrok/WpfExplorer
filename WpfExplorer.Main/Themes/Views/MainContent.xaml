@@ -12,11 +12,17 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <units:FolderTreeView ItemsSource="{Binding Roots}"
                                                   SelectionCommand="{Binding FolderChangedCommand}"/>
-                            <DataGrid ItemsSource="{Binding Files}" Grid.Column="1"/>
+                            <StackPanel Grid.Column="1">
+                                <Button Content="Go Up" Command="{Binding GoToParentCommand}" />
+                                <Button Content="Go Back" Command="{Binding GoBackCommand}" />
+                                <Button Content="Go Forward" Command="{Binding GoForwardCommand}" />
+                            </StackPanel>
+                            <units:FileListBox Grid.Column="2" ItemsSource="{Binding Files}"></units:FileListBox>
                         </Grid>
                     </Border>
                 </ControlTemplate>

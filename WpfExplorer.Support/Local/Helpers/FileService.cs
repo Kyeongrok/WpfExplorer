@@ -9,10 +9,12 @@ namespace WpfExplorer.Support.Local.Helpers;
 public class FileService
 {
     private readonly DirectoryManager _directoryManager;
+    private readonly NavigatorService _navigatorService;
 
-        public FileService(DirectoryManager directoryManager) 
+        public FileService(DirectoryManager directoryManager, NavigatorService navigatorService) 
         {
             _directoryManager = directoryManager;
+            _navigatorService = navigatorService;
         }
 
         public List<FolderInfo> GenerateRootNodes()
@@ -88,5 +90,58 @@ public class FileService
             }
 
             return children;
+        }
+        
+        public void TryRefreshFiles(ObservableCollection<FolderInfo> files, out bool isAccessDenied)
+        {
+            var path = _navigatorService.Current.FullPath;
+            isAccessDenied = !Directory.Exists(path) || !IsAccessible(path);
+
+            if (!isAccessDenied)
+            {
+                files.Clear();
+                files.AddRange(FetchFilesAndDirectories(path));
+            }
+        }
+        
+        private static bool IsAccessible(string path)
+        {
+            try
+            {
+                Directory.GetDirectories(path);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private static List<FolderInfo> FetchFilesAndDirectories(string path)
+        {
+            return Directory.GetFileSystemEntries(path)
+                .Select(entry => new FolderInfo
+                {
+                    Name = Path.GetFileName(entry),
+                    IconType = Directory.Exists(entry) ? IconType.Folder : DetermineIconType(entry),
+                    FullPath = entry,
+                    Length = Directory.Exists(entry) ? 0 : new FileInfo(entry).Length
+                })
+                .OrderBy(info => info.IconType == IconType.Folder ? 0 : 1)
+                .ToList();
+        }
+        
+        private static IconType DetermineIconType(string file)
+        {
+            var ext = Path.GetExtension(file).ToUpper();
+            return ext switch
+            {
+                ".JPG" or ".JPEG" or ".GIF" or ".BMP" or ".PNG" => IconType.FileImage,
+                ".PDF" => IconType.FilePdf,
+                ".ZIP" => IconType.FileZip,
+                ".EXE" => IconType.FileCheck,
+                ".DOCX" or ".DOC" => IconType.FileWord,
+                _ => IconType.File,
+            };
         }
 }
