@@ -14,5 +14,6 @@ internal class HelperModules : IModule
     {
         containerRegistry.RegisterSingleton<DirectoryManager>();
         containerRegistry.RegisterSingleton<FileService>();
+        containerRegistry.RegisterSingleton<NavigatorService>();
     }
 }

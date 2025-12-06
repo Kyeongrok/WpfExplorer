@@ -9,7 +9,15 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                        <units:FolderTreeView ItemsSource="{Binding Roots}" SelectionCommand="{Binding FolderChangedCommand}"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <units:FolderTreeView ItemsSource="{Binding Roots}"
+                                                  SelectionCommand="{Binding FolderChangedCommand}"/>
+                            <DataGrid ItemsSource="{Binding Files}" Grid.Column="1"/>
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
