@@ -25,14 +25,19 @@ public class ExplorerViewModel : ObservableBase, IViewLoadable
 
     public void OnLoaded(IViewable view)
     {
-        IRegion mainRegion = _regionManager.Regions["MainRegion"];
-        IViewable mainContent = _containerProvider.Resolve<IViewable>("MainContent");
+            ImportContent("MainContent", "MainRegion");
+            ImportContent("LocationContent", "LocationRegion");
+    }
+    private void ImportContent(string name, string regionName)
+    {
+        IRegion mainRegion = _regionManager.Regions[regionName];
+        IViewable mainContent = _containerProvider.Resolve<IViewable>(name);
 
         if (!mainRegion.Views.Contains(mainContent))
         {
             mainRegion.Add(mainContent);
         }
         mainRegion.Activate(mainContent);
-            
     }
+            
 }
