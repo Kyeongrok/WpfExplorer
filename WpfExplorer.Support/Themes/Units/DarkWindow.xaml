@@ -43,6 +43,9 @@
                             </Grid.ColumnDefinitions>
                             <Border Grid.ColumnSpan="4"
                                     Background="#222222"/>
+                            <ContentPresenter
+                                Content="{TemplateBinding Location}"
+                                ContentTemplate="{TemplateBinding LocationTemplate}"/>
                             <units:MinimizeButton Grid.Column="1"/>
                             <units:MaximizeButton Grid.Column="2"/>
                             <units:CloseButton Grid.Column="3"/>

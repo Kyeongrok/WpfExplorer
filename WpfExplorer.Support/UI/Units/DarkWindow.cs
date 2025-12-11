@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using Jamesnet.Wpf.Controls;
 
 namespace WpfExplorer.Support.UI.Units
@@ -47,6 +34,27 @@ namespace WpfExplorer.Support.UI.Units
     /// </summary>
     public class DarkWindow : JamesWindow
     {
+        
+        public static readonly DependencyProperty LocationTemplateProperty =
+            DependencyProperty.Register("LocationTemplate", typeof(DataTemplate),
+            typeof(DarkWindow), new UIPropertyMetadata(null));
+        
+        public DataTemplate LocationTemplate
+        {
+            get { return (DataTemplate)GetValue(LocationTemplateProperty); }
+            set { SetValue(LocationTemplateProperty, value); }
+        }
+        
+        public static readonly DependencyProperty LocationProperty =
+            DependencyProperty.Register("Location", typeof(object),
+            typeof(DarkWindow), new UIPropertyMetadata(null));
+        
+        public object Location
+        {
+            get { return (object)GetValue(LocationProperty); }
+            set { SetValue(LocationProperty, value); }
+        }
+        
         static DarkWindow()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DarkWindow), 
